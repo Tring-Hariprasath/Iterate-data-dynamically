@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>
@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <table>
+    <table summary="Employee details">
+      <th>
         <tr>
             <td>
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
@@ -34,15 +35,16 @@
                     </div>
                 </form>
             </td>
+        </th>
             <td>
-                <table class="list" id="employeeList">
+                <table summary="Employee details" class="list" id="employeeList">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Employee Code</th>
-                            <th>Salary</th>
-                            <th>City</th>
-                            <th></th>
+                            <th scope="row">Name</th>
+                            <th scope="row">Employee Code</th>
+                            <th scope="row">Salary</th>
+                            <th scope="row">City</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
