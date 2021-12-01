@@ -31,8 +31,8 @@ function insertNewRecord(data) {
     cell3.innerHTML = data.salary;
     var cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.city;
-    cell4 = newRow.insertCell(4);
-    cell4.innerHTML = `<button onClick="onEdit(this)">Edit</button>
+    cell5 = newRow.insertCell(4);
+    cell5.innerHTML = `<button onClick="onEdit(this)">Edit</button>
                        <button onClick="onDelete(this)">Delete</button>`;
 }
 
