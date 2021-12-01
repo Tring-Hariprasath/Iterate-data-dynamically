@@ -9,8 +9,9 @@
 </head>
 
 <body>
-    <table summary="Employee details">
-      <th>
+    <table>
+      <caption>Main table</caption>   
+      <th scope="row">
         <tr>
             <td>
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
@@ -37,7 +38,8 @@
             </td>
         </th>
             <td>
-                <table summary="Employee details" class="list" id="employeeList">
+                <table class="list" id="employeeList">
+                    <caption>Sub table</caption>
                     <thead>
                         <tr>
                             <th scope="row">Name</th>
