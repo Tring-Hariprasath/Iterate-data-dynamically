@@ -31,7 +31,7 @@ function insertNewRecord(data) {
     cell3.innerHTML = data.salary;
     var cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.city;
-    var cell4 = newRow.insertCell(4);
+    cell4 = newRow.insertCell(4);
     cell4.innerHTML = `<button onClick="onEdit(this)">Edit</button>
                        <button onClick="onDelete(this)">Delete</button>`;
 }
@@ -60,13 +60,13 @@ function updateRecord(formData) {
 
 function onDelete(td) {
     if (confirm('Are you sure to delete this record ?')) {
-        row = td.parentElement.parentElement;
+        var row = td.parentElement.parentElement;
         document.getElementById("employeeList").deleteRow(row.rowIndex);
         resetForm();
     }
 }
 function validate() {
-    isValid = true;
+    var isValid = true;
     if (document.getElementById("fullName").value == "") {
         isValid = false;
         document.getElementById("fullNameValidationError").classList.remove("hide");
